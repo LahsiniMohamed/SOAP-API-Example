@@ -1,0 +1,15 @@
+{
+  "name": "expressclient",
+  "version": "1.0.0",
+  "description": "soap client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lahsini mohamed",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "soap": "^0.36.0"
+  }
+}
