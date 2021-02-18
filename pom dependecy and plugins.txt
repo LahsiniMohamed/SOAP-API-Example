@@ -1,0 +1,44 @@
+<!-- https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-ri -->
+  <dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>jaxws-ri</artifactId>
+      <version>2.3.3</version>
+      <type>pom</type>
+  </dependency>
+  <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.3.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+<dependency>
+    <groupId>javax.ws.rs</groupId>
+    <artifactId>javax.ws.rs-api</artifactId>
+    <version>2.0</version>
+</dependency>
+
+
+<plugin> 
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>jaxws-maven-plugin</artifactId>
+    <version>2.6</version>
+    <executions> 
+        <execution> 
+            <id>wsimport-from-jdk</id>
+            <goals>
+                <goal>wsimport</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <wsdlUrls>
+            <wsdlUrl>//put ur wsdl addresse here</wsdlUrl> 
+        </wsdlUrls>
+        <keep>true</keep> 
+        <packageName>com.baeldung.soap.ws.client.generated</packageName> 
+        <sourceDestDir>src/main/java</sourceDestDir>
+    </configuration>
+</plugin>
+
+command : mvn clean jaxws:wsimport
